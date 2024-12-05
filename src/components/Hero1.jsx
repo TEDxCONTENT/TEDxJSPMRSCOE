@@ -1,7 +1,7 @@
 import heroimg from "../assets/tedgif.png";
 import theme from "../assets/theme.png";
 import TedxImg from "../../public/R&B.png";
-import team from "../assets/team.png";
+import teamb from "../assets/teamb.png";
 import Navbar1 from "./Navbar1";
 
 const Hero = () => {
@@ -12,9 +12,10 @@ const Hero = () => {
     return (
         <div
             className="relative bg-cover bg-center h-screen"
-            style={{ backgroundImage: `url(${team})` }}
+            style={{ backgroundImage: `url(${teamb})` }}
         >
-            <div className="absolute inset-0 bg-black bg-opacity-60"></div>
+            {/*<div className="absolute inset-0 bg-black bg-opacity-60"></div>*/}
+            
             {/* Navbar */}
             <Navbar1 />
 
