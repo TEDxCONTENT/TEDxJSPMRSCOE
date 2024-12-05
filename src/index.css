@@ -1,0 +1,36 @@
+.About-tedxRscoe {
+  background: url("./assets/bgimgdark.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.Tedx2022-bg {
+  background: url("./assets/TEDX.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 45.875rem;
+}
+.bg-rscoe{
+  background: url("./assets/rscoe-bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.redbg-2022 {
+  background: url("./assets/12133.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 35.875rem;
+}
+.speakers-2022 {
+  background: url("./assets/background-2022.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100rem;
+}
+
+
+
+.merriweather-regular {
+  font-family: "Merriweather", serif;
+  font-weight: 400;
+  font-style: normal;
+}

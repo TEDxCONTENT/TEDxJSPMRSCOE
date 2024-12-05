@@ -1,0 +1,139 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;700&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.font-inter {
+  font-family: "Inter Tight", sans-serif;
+}
+.font-inter-bold {
+  font-family: "Inter Tight", sans-serif;
+  font-weight: 600;
+}
+
+.animate-slideright {
+  animation: slideright 2s ease-in-out 1 forwards;
+}
+@keyframes slideright {
+  0% {
+    transform: translateX(-20rem);
+    opacity: 0.1;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+.animate-slideleft {
+  animation: slideleft 2s ease-in-out 1 forwards;
+}
+@keyframes slideleft {
+  0% {
+    transform: translateX(20rem);
+    opacity: 0.1;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes blob {
+  0% {
+    transform: translate(0px, 0px) scale(1);
+  }
+
+  33% {
+    transform: translate(70px, -170px) scale(1.1);
+  }
+
+  66% {
+    transform: translate(-150px, 50px) scale(0.9);
+  }
+
+  100% {
+    transform: translate(0px, 11px) scale(1);
+  }
+}
+
+.animate-blob {
+  animation: blob 8s ease-in-out infinite;
+}
+
+.animation-delay-2s {
+  animation-delay: 2s;
+}
+
+.animation-delay-4s {
+  animation-delay: 4s;
+}
+
+.main-special {
+  text-align: center;
+  background: linear-gradient(
+    to right,
+    #ff3e3e 10%,
+    rgb(255, 0, 0) 40%,
+    rgb(180, 0, 0) 60%
+  );
+  background-size: 200% auto;
+  color: #000;
+  font-weight: 800;
+  background-clip: text;
+  text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shine 5s linear infinite;
+}
+
+@keyframes shine {
+  to {
+    background-position: 200% center;
+  }
+}
+
+.About-tedxRscoe {
+  background: url("../assets/bgimgdark.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.Tedx2022-bg {
+  background: url("../assets/bg.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 45.875rem;
+}
+.bg-rscoe{
+  background: url("../assets/rscoe-bg.jpg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  min-height: 40rem;
+}
+.speakers-2022 {
+  background: url("../assets/whitebg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100rem;
+}
+.form-control {
+  border-radius: 0px;
+  border: none;
+  border-bottom: 2px solid #bfbfbf;
+}
+.form-control:focus {
+  box-shadow: none;
+  outline: none;
+  border-bottom: 2px solid #e81313;
+}
+.form-control::placeholder {
+  font-size: 16px;
+  color: #6e6e6e;
+  letter-spacing: 1px;
+}
+.card-shadow {
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+.form-shadow {
+  box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em,
+    rgba(90, 125, 188, 0.05) 0px 0.25em 1em;
+}
