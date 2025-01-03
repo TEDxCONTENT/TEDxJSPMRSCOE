@@ -11,10 +11,10 @@ export const sponsors = [
     name: 'Colive',
     logo: coliveLogo
   },
-  {
-    name: 'Hotel Tip Top',
-    logo: hotelTipTop
-  },
+  // {
+  //   name: 'Hotel Tip Top',
+  //   logo: hotelTipTop
+  // },
   // {
   //   name: 'Partimer Inc.',
   //   logo: partimer

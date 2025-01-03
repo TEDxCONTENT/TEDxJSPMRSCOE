@@ -27,7 +27,7 @@ const HomePage = () => {
       {/* <SpeakerBanner/> */}
       {/* <SpeakersInfo2024/> */}
       {/* <TeamPhoto/> */}
-      {/* <Sponsorship></Sponsorship> */}
+      <Sponsorship></Sponsorship>
     </>
   );
 };
