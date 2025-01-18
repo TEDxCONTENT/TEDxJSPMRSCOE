@@ -7,8 +7,20 @@ import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [clicked, setClicked] = useState(false);
+
+  const handleMenuToggle = () => {
+    setClicked(!clicked);
+
+    // Prevent scrolling when menu is open
+    if (!clicked) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+  };
+
   return (
-    <div>
+    <div className="relative z-50">
       <nav className="py-2 lg:px-16 p-4 flex justify-between items-center font-inter text-xl bg-transparent backdrop-blur-md">
         <Link to="/">
           <img className="w-48" src={logo} alt="logo"></img>
@@ -24,49 +36,66 @@ const Navbar = () => {
             <Link to="/tedx2022">TEDx2022</Link>
           </li>
           <li className="cursor-pointer hover:text-red-500">
-            <Link to="/contact">Contact </Link>
+            <Link to="/contact">Contact</Link>
           </li>
         </ul>
 
+        {/* Hamburger and Close Icons */}
         <div className="lg:hidden">
           <BiMenuAltRight
-            onClick={() => {
-              setClicked(true);
-            }}
-            className={`${!clicked ? "cursor-pointer lg:hidden " : "hidden"}`}
+            onClick={handleMenuToggle}
+            className={`${!clicked ? "cursor-pointer lg:hidden" : "hidden"}`}
             size="2em"
             color="red"
           />
           <IoCloseSharp
-            onClick={() => {
-              setClicked(false);
-            }}
-            className={`${clicked ? "cursor-pointer lg:hidden " : "hidden"}`}
+            onClick={handleMenuToggle}
+            className={`${clicked ? "cursor-pointer lg:hidden" : "hidden"}`}
             size="2em"
             color="red"
           />
         </div>
       </nav>
+
+      {/* Dropdown Menu */}
       <div
-        className={`${
-          clicked
-            ? "lg:hidden flex justify-evenly items-center gap-8 bg-red-500 text-white text-xl flex-col p-8 font-inter"
-            : "hidden"
-        }`}
+        className={`absolute top-16 left-0 right-0 bg-red-500 text-white py-4 transform ${
+          clicked ? "scale-y-100 opacity-100" : "scale-y-0 opacity-0"
+        } transition-all duration-300 origin-top`}
+        style={{ zIndex: 1000 }}
       >
-        <p className="cursor-pointer hover:text-slate-900">
-          <Link to="/about">About</Link>
-        </p>
-        <p className="cursor-pointer hover:text-slate-900">
-          <Link to="/speakers">Speakers</Link>
-        </p>
-        <p className="cursor-pointer hover:text-slate-900">
-          <Link to="/tedx2022">TEDx2022</Link>
-        </p>
-        <p className="cursor-pointer hover:text-slate-900">
-          <Link to="/contact">Contact </Link>
-        </p>
+        <ul className="flex flex-col items-center space-y-4 text-xl font-medium">
+          <li className="cursor-pointer hover:text-slate-900">
+            <Link to="/about" onClick={handleMenuToggle}>
+              About
+            </Link>
+          </li>
+          <li className="cursor-pointer hover:text-slate-900">
+            <Link to="/speakers" onClick={handleMenuToggle}>
+              TEDx2024
+            </Link>
+          </li>
+          <li className="cursor-pointer hover:text-slate-900">
+            <Link to="/tedx2022" onClick={handleMenuToggle}>
+              TEDx2022
+            </Link>
+          </li>
+          <li className="cursor-pointer hover:text-slate-900">
+            <Link to="/contact" onClick={handleMenuToggle}>
+              Contact
+            </Link>
+          </li>
+        </ul>
       </div>
+
+      {/* Background Overlay */}
+      {clicked && (
+        <div
+          className="fixed inset-0 bg-black bg-opacity-50"
+          onClick={handleMenuToggle}
+          style={{ zIndex: 999 }}
+        ></div>
+      )}
     </div>
   );
 };

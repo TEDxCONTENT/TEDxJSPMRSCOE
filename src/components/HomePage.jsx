@@ -23,7 +23,7 @@ const HomePage = () => {
     {/* <CountdownModal isOpen={modalIsOpen} onClose={handleCloseModal} targetDate={targetDate} /> */}
       {/* <Navbar1></Navbar1> */}
       <Hero1></Hero1>
-      {/* <Theme></Theme> */}
+      <Theme></Theme>
       {/* <SpeakerBanner/> */}
       {/* <SpeakersInfo2024/> */}
       {/* <TeamPhoto/> */}

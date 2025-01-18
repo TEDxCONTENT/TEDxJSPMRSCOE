@@ -4,7 +4,7 @@ import { sponsors } from './Sponsorship_logo';
 const Sponsorship = () => {
   return (
     <div className="bg-gray-100 py-8">
-      <h2 className="text-5xl text-center text-gray-800 mb-4 font-bold">Our Sponsors</h2>
+      <h2 className="text-5xl text-center text-gray-800 mb-4 font-bold">Our Sponsor</h2>
       <div className="flex justify-center items-center">
         {sponsors.map((sponsor, index) => (
           <img
