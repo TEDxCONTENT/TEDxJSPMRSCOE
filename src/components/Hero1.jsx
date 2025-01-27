@@ -8,7 +8,7 @@ import Navbar1 from "./Navbar1";
 
 const Hero = () => {
     const redirectToForm = () => {
-        window.open("https://shorturl.at/ZZFdv", "_blank");
+        window.open("https://linktr.ee/tedxrscoe", "_blank");
     };
 
     return (
