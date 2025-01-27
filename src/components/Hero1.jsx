@@ -3,6 +3,7 @@ import theme from "../assets/theme.png";
 import TedxImg from "../../public/R&B.png";
 import teamb from "../assets/teamb.png";
 import evolvexLogo from "../../public/Group 12.png"; 
+import sponsor from "../../public/Sponsers/sponsor2025.png"
 import Navbar1 from "./Navbar1";
 
 const Hero = () => {
@@ -20,12 +21,18 @@ const Hero = () => {
 
             {/* Content */}
             <div className="relative z-10 flex flex-col justify-center items-center text-center text-white h-full px-4">
-                {/* Evolve X Logo */}
-                {/* <img
-                    src={evolvexLogo}
-                    alt="Evolve X Logo"
-                    className="w-32 md:w-40 lg:w-48 mb-6"
-                /> */}
+                {/* Sponsor Logo */}
+                <div className="flex flex-col items-center mb-8">
+                    <img
+                        src={sponsor}
+                        alt="Sponsor Logo"
+                        className="mb-4"
+                        style={{ width: "400px", height: "110px", objectFit: "contain" }}
+                    />
+                    <p className="text-sm md:text-base lg:text-lg uppercase tracking-wide font-semibold">
+                        Presents
+                    </p>
+                </div>
 
                 {/* Heading */}
                 <h1 className="text-4xl md:text-6xl lg:text-8xl font-extrabold tracking-wide leading-tight">

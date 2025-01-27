@@ -4,9 +4,11 @@ import Hero1 from "./Hero1"
 import Theme from "./Theme";
 import Sponsorship from "./Sponsorship";
 import SpeakersInfo2024 from "./SpeakerInfo2024";
+import SpeakersInfo2025 from "./SpeakerInfo2025";
 import CountdownModal from "./CountDown";
 import TeamPhoto from "./TeamPhoto";
 import SpeakerBanner from "./SpeakerBanner";
+import EntertainmentSession from "./EntertainmentSession";
 // import Navbar1 from "./Navbar1";
 
 const HomePage = () => {
@@ -25,9 +27,10 @@ const HomePage = () => {
       <Hero1></Hero1>
       <Theme></Theme>
       {/* <SpeakerBanner/> */}
-      {/* <SpeakersInfo2024/> */}
+      <SpeakersInfo2025/>
+      <EntertainmentSession/>
       {/* <TeamPhoto/> */}
-      <Sponsorship></Sponsorship>
+      {/* <Sponsorship></Sponsorship> */}
     </>
   );
 };
