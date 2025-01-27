@@ -3,7 +3,7 @@ import amitesh from '../../public/Speakers2025/amiteships.jpg';
 import mitali from '../../public/Speakers2025/mitali.png';
 import deesha from '../../public/Speakers2025/deeshakatkar.jpg';
 import cdr from '../../public/Speakers2025/nikhil.jpg';
-import harsh from '../../public/Speakers2025/harshvira.jpg';
+import harsh from '../../public/Speakers2025/Harshvira.jpg';
 
 
 const speaker2025=[
